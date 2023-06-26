@@ -94,12 +94,12 @@ But _any_ app that makes HTTP requests can talk to a webserver. In this case our
 
 👉 Since TypeScript is already configured for this project, you just need to rename files to `.ts` and start using TypeScript features.
 
-🛑 In this case, it'll be easier if you rename _all_ the `.mjs` files in `client` to `.ts` at the same time. If you just rename some of them, you'll get weird module errors.
+🛑 In this case, it'll be easier if you rename _all_ the `.ts` files in `client` to `.ts` at the same time. If you just rename some of them, you'll get weird module errors.
 
 🛑 NB: Watch out for your `import` statements. When you convert to TypeScript, you should remove any file extensions, so:
 
 ```TypeScript
-import { exit } from "./exit/exit.mjs";    // ❌ OLD
+import { exit } from "./exit/exit.ts";    // ❌ OLD
 import { exit } from "./exit/exit";        // ✅ NEW - after renaming to "exit.ts"
 ```
 

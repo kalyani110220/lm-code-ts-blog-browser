@@ -1,18 +1,19 @@
-import { exit } from "./exit/exit.mjs";
-import { showMenu } from "./menu/menu.mjs";
-import { browsePosts } from "./menu/options/browse_posts/browse_posts.mjs";
-import { sendMessage } from "./menu/options/send_message/send_message.mjs";
-import { showAllPosts } from "./menu/options/show_all_posts/show_all_posts.mjs";
-import { showAllUsers } from "./menu/options/show_all_users/show_all_users.mjs";
-import { State } from "./states/state.mjs";
-import { states } from "./states/states.mjs";
-import { clear, print, printNewLine, prompt } from "./ui/console.mjs";
+import { exit } from "./exit/exit";
+import { showMenu } from "./menu/menu";
+import { browsePosts } from "./menu/options/browse_posts/browse_posts";
+import { sendMessage } from "./menu/options/send_message/send_message";
+import { showAllPosts } from "./menu/options/show_all_posts/show_all_posts";
+import { showAllUsers } from "./menu/options/show_all_users/show_all_users";
+import { State } from "./states/state";
+import { states } from "./states/states";
+import { clear, print, printNewLine, prompt } from "./ui/console.js";
 
 async function begin() {
-	clear(true);
+	clear();
 	print("👋 Welcome to our cool blog browser!");
 	await prompt("⌨️ Press [ENTER] to continue! 🕶️");
 	main();
+  
 }
 
 async function main() {

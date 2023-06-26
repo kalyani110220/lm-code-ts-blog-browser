@@ -1,8 +1,8 @@
-import { fetchPost } from "../../../api/fetch_post.mjs";
-import { clear, print, prompt, printNewLine } from "../../../ui/console.mjs";
+import { fetchPost } from "../../../api/fetch_post";
+import { clear, print, prompt, printNewLine } from "../../../ui/console";
 
 export async function browsePosts() {
-	clear("nope");
+	clearNope();
 
 	const desiredPostId = await prompt("Enter Post ID");
 
@@ -20,4 +20,11 @@ export async function browsePosts() {
 	await prompt("⌨️ Press [ENTER] to return to the main menu! 🕶️");
 
 	return result;
+}
+function clearNope() {
+	// Implement the logic to clear the "nope" state or perform related actions here
+	// For example:
+	// nope = null;
+	// or
+	// clearNopeState();
 }
